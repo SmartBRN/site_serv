@@ -1,0 +1,60 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: "Roboto", "Roboto_IE";
+}
+
+@font-face{font-family: "Roboto";src: url(../fonts/RobotoRegular/RobotoRegular.ttf);font-style: normal;font-weight: normal;}
+@font-face{font-family: "Roboto_IE";src: local("OpenSans2"), url(../fonts/RobotoRegular/RobotoRegular.eot);font-style: normal;font-weight: normal;}
+
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:link{text-decoration: none;}
+a:visited{text-decoration: none;}
+a:active{text-decoration: none;}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+}
+.without_numbers{
+	list-style-type: none;
+}
+.hidden {
+	display: none;
+}
+
+/*Основные цвета*/
+.white_bg{background-color: #fff;}
+.gray_bg{background-color: #F2F3F5;}
+.spec_red{background-color: #A22726;}
+.gray_text{color: #8F8F8F;}
+.spec_text{color: #A22726;}
+/*______________*/
+

@@ -10,54 +10,53 @@
 	include_once 'head.php';
 	?>
 </head>
-<body class="gray_bg">
+<body>
 	<?
 	include_once'header.php';
-		
-	$link = mysqli_connect('mysql.hostinger.ru', 'u903309293_admin', 'Apm42xGEkVeQ27!', 'u903309293_news');
+	session_start();
+	// $host = 
+	// $user_name = 
+	// $user_pass = 
+	// $db_name = 
+
+	$link = mysqli_connect('$host', '$user_name', '$user_pass', '$db_name');
 	if (!$link) {
 	    echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
 	    echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
 	    echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
 	    exit;
 	}
-	// echo "Соединение с MySQL установлено!" . PHP_EOL;
-	// echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
 
 	mysqli_query($link,"SET NAMES 'utf8' ");
-	$data =  mysqli_query($link, "SELECT * FROM blog");
+	// $data =  mysqli_query($link, "SELECT * FROM blog");
 
-	mysqli_close($link);
+	// mysqli_close($link);
 
 	// $row = mysqli_fetch_array($data, MYSQLI_NUM);
 	// printf ("%s (%s)\n", $row[1], $row[2]);  
 	?>
-	<div class="headers_of_news">
-		
-	</div>
+	
 
 	<div class="news">
 		
 	
 		<?
-		while ($row = mysqli_fetch_array($data, MYSQLI_NUM)) {//$row = mysql_fetch_array($data)
-			?><p class="news_header"><? echo $row[1];//вывод заголовка ?> </p>
+		while ($row = mysqli_fetch_array($data, MYSQLI_NUM)) {// вывод в цикле из БД
+			?>
+			<p class="news_header"><? echo $row[1];//вывод з?> </p>
 		
 			<div class="video_content">
 				<iframe class="video_ref" src="<?echo $row[2]?>" allow="autoplay; encrypted-media" frameborder="0" allowfullscreen></iframe>
 				<br>
 			</div>
-			<div class="news_text">
-				<p><? echo $row[3]; ?></p>
-				<br>
-				<p>Группа ВК - <a href="https://vk.com/mihutka_ru" target="_blank">vk.com/mihutka_ru</a></p>
-				<p>Канал на YouTube - <a href="https://www.youtube.com/channel/UCt1dtgJVaQgBN1q6nlPyaVA" target="_blank">https://www.youtube.com/channel/<br>UCt1dtgJVaQgBN1q6nlPyaVA</a></p>
-			</div>
-			<hr>
+
 			<?
 		} ?>
 	</div>
-	<div style="clear: both;"></div>
+	
+	
+
+
 	
 
 
