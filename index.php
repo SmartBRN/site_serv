@@ -12,7 +12,7 @@
 </head>
 <body>
 	<?
-	include_once'header.php';
+	include_once'header.php'; /*Здесь верстка шапки сайта*/
 	session_start();
 	// $host = 
 	// $user_name = 
@@ -37,22 +37,9 @@
 	?>
 	
 
-	<div class="news">
-		
-	
-		<?
-		while ($row = mysqli_fetch_array($data, MYSQLI_NUM)) {// вывод в цикле из БД
-			?>
-			<p class="news_header"><? echo $row[1];//вывод з?> </p>
-		
-			<div class="video_content">
-				<iframe class="video_ref" src="<?echo $row[2]?>" allow="autoplay; encrypted-media" frameborder="0" allowfullscreen></iframe>
-				<br>
-			</div>
 
-			<?
-		} ?>
-	</div>
+
+	<!-- Здесь основная верстка  -->
 	
 	
 
