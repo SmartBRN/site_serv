@@ -10,7 +10,9 @@
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="libs/animate/animate-css.js"></script>
 <script src="libs/animate/wow.min.js"></script>
+<?php
 
+?>
 <script>
 	new WOW().init();
 </script>

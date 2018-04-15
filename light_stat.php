@@ -88,70 +88,22 @@
 			    $stmt->close();
 			}
 			$number_of_objects =  mysqli_query($connection, "SELECT COUNT(*) FROM object_to_user_link WHERE id_user = $user_id");
-			// $noo = mysqli_fetch_array($number_of_objects, MYSQLI_NUM);
-			// $mas_of_objects = [$noo];
-			// $mas_of_objects = array($noo);
-		?>
-		<div class="out_data">
-			<p>Статистика света</p>
-
-			<table>
-				<tr>
-					<td>Комната</td>
-					<td>Датчик</td>
-					<td>Тип датчика</td>
-					<td>Показания</td>
-					<td>Дата/время</td>
-				</tr>
-			<?php
-				$data =  mysqli_query($connection, "SELECT * FROM data GROUP BY date_time DESC");
-				echo "<br>Датчики имеются в следующих комнатах: ";
-				while ($row = mysqli_fetch_assoc($data)) {
-					?>
-					<tr>
-						<td>
-							<?php
-							$id_room = $row['room'];
-							$room_name = mysqli_query($connection, "SELECT name FROM room WHERE id = $id_room");
-							$mas = mysqli_fetch_assoc($room_name);
-							printf ("%s; ", $mas['name']);
-							?>
-						</td>
-						<td>
-							<?php
-							printf ("%s; ", $row['wemos']);
-							?>
-						</td>
-						<td>
-							<?php
-							$id_sensor = $row['sensor'];
-							$sensor_name = mysqli_query($connection, "SELECT type FROM sensor WHERE id = $id_sensor");
-							$mas = mysqli_fetch_assoc($sensor_name);
-							printf ("%s; ", $mas['type']);
-							?>
-						</td>
-						<td>
-							<?php
-							printf ("%s; ", $row['value']);
-							?>
-						</td>
-						<td>
-							<?php
-							printf ("%s; ", $row['date_time']);
-							?>
-						</td>
-					</tr>	
-					<?php
-					
-				}
-				// printf("")
+			// 192.168.0.101 - нет реле
+			// 192.168.0.100 - две реле 
+			// 192.168.0.102 - только свет
+			// id = 0	
+			// $_GET['state']='on';	
+			// $_GET['state']='off';
 			?>
-			</table>
-		</div>
-		<?php
-		
+			
 
-	
+
+			<!-- <button id="room1_on_but">Включить свет в room1</button>
+			<button id="room1_off_but">Выключить свет в room1</button><br><br>
+
+			<button id="room2_on_but">Включить свет в room2</button>
+			<button id="room2_off_but">Выключить свет в room2</button> -->
+			<?php
 	}
 	
 
@@ -172,13 +124,3 @@
 
 </body>
 </html>
-
-
-
-
-
-	
-	
-	
-
-

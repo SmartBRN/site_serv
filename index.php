@@ -144,16 +144,14 @@ session_start();
 								$h1 = $wheather_content1['humidity'];
 								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('3', '$t1', '1', '2')");
 								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('5', '$h1', '1', '2')");
-								// $url2 = file_get_contents("http://192.168.0.101/json/dht");
-								// $content2 = json_decode($url2,true);
-
-								// $url3 = file_get_contents("http://192.168.0.102/json/dht");
-								// $content3 = json_decode($url3,true);
 								$wheather_content3 = get_json_content("http://192.168.0.102/json/dht");
 								$t2 = $wheather_content3['temperature'];
 								$h2 = $wheather_content1['humidity'];
 								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('3', '$t2', '3', '3')");
 								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('5', '$h2', '3', '3')");
+
+
+
 								
 								if ($t1 != 0 && $t2 != 0) {
 									$average = ($t1 + $t2)/2;
@@ -168,29 +166,39 @@ session_start();
 						?>	
 						</td>
 						<td>
-							<a href="temp_stat.php">Статистика и управление</a>
+
+							<!-- <a href="temp_stat.php">Статистика и управление</a> -->
 						</td>
 					</tr>
 					<tr>
 						<td class="left_col">Свет</td>
 						<td>
+							<a href="http://192.168.0.100/relay?id=0&state=off" target="_blank">Включить свет в room1</a><br>
+							<a href="http://192.168.0.100/relay?id=0&state=on" target="_blank">Выключить свет в room1</a><br>
+
+							<a href="http://192.168.0.102/relay?id=0&state=off" target="_blank">Включить свет в room2</a><br>
+							<a href="http://192.168.0.102/relay?id=0&state=on" target="_blank">Выключить свет в room2</a><br>
 						<?php
 							// тут json парс
 						?>	
 						</td>
 						<td>
-							<a href="light_stat.php">Статистика и управление</a>
+							<!-- <a href="light_stat.php">Статистика и управление</a> -->
+							
 						</td>
 					</tr>
 					<tr>
 						<td class="left_col">Пол</td>
 						<td>
+							<a href="http://192.168.0.100/relay?id=1&state=on">Включить пол в room1</a><br>
+							<a href="http://192.168.0.100/relay?id=1&state=off">Выключить пол в room1</a>
 						<?php
 							// тут json парс
 						?>	
 						</td>
 						<td>
-							<a href="floor_stat.php">Статистика и управление</a>
+							<!-- <a href="floor_stat.php">Статистика и управление</a> -->
+							
 						</td>
 					</tr>
 				</table>
@@ -213,6 +221,7 @@ session_start();
 
 
 	<?php
+	include_once'listener.php';
 	include_once'footer.php';
 	include_once'scripts.php';
 

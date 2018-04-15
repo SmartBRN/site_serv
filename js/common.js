@@ -42,7 +42,57 @@ $(document).ready(function() {
 		});
 	}));
 
-	
+	// $("#room1_on_but").submit(function() {
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "../php/room1_light_on.php",
+	// 		data: $(this).serialize()
+	// 	}).done(function() {
+	// 		$(this).find("input").val("");
+	// 		// alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+	// 		$("#room1_on_but").trigger("reset");
+	// 	});
+	// 	return false;
+	// });
+
+	// $("#room1_off_but").submit(function() {
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "../php/room1_light_off.php",
+	// 		data: $(this).serialize()
+	// 	}).done(function() {
+	// 		$(this).find("input").val("");
+	// 		// alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+	// 		$("#room1_off_but").trigger("reset");
+	// 	});
+	// 	return false;
+	// });
+
+	// $("#room2_on_but").submit(function() {
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "../php/room2_light_on.php",
+	// 		data: $(this).serialize()
+	// 	}).done(function() {
+	// 		$(this).find("input").val("");
+	// 		// alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+	// 		$("#room2_on_but").trigger("reset");
+	// 	});
+	// 	return false;
+	// });
+
+	// $("#room2_off_but").submit(function() {
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "../php/room2_light_off.php",
+	// 		data: $(this).serialize()
+	// 	}).done(function() {
+	// 		$(this).find("input").val("");
+	// 		// alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+	// 		$("#room2_off_but").trigger("reset");
+	// 	});
+	// 	return false;
+	// });
 
 	
 	//	Настройка адаптивности
