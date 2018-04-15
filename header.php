@@ -53,14 +53,14 @@
 		<span class="show_mobile_menu animated fadeIn ravno">&equiv;</span>
 		<span class="close_mobile_menu animated fadeIn krest" style="display: none;">&times;</span>
 	</div>
-	<div class="hidden-md mobile_menu_list ">
+	<div class="visible-md mobile_menu_list ">
 		<ul class="text-left">
 			<li><a id="li_1" href="index.php" class="animated fadeInDown">Управление домом</a></li>
 			<li><a id="li_2" href="temp_stat.php" class="animated fadeInDown">Журнал</a></li>
 		</ul>
 	</div>
 	<!-- _________________ -->
-	<div class="menu_row hidden-xs">		
+	<div class="menu_row visible-xs">
 		<a href="index.php">Управление домом</a>
 		<a href="temp_stat.php">Журнал</a>
 	</div>
