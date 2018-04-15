@@ -18,11 +18,11 @@
 	margin: 0;
 	padding: 0;
 	outline: none;
-	font-family: "Roboto", "Roboto_IE";
+	font-family: "Arial" ;
 }
 
-@font-face{font-family: "Roboto";src: url(../fonts/RobotoRegular/RobotoRegular.ttf);font-style: normal;font-weight: normal;}
-@font-face{font-family: "Roboto_IE";src: local("OpenSans2"), url(../fonts/RobotoRegular/RobotoRegular.eot);font-style: normal;font-weight: normal;}
+/*@font-face{font-family: "Roboto";src: url(../fonts/RobotoRegular/RobotoRegular.ttf);font-style: normal;font-weight: normal;}*/
+/*@font-face{font-family: "Roboto_IE";src: local("OpenSans2"), url(../fonts/RobotoRegular/RobotoRegular.eot);font-style: normal;font-weight: normal;}*/
 
 a{text-decoration: none;}
 a:hover{text-decoration: none;}

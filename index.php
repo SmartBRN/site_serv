@@ -123,11 +123,8 @@ session_start();
 					while ($row = mysqli_fetch_assoc($data)) {
 						printf ("%s; ", $row['room']);
 					}
-					echo "\n\n";	
-				}
-
-				?>
-
+					echo "\n\n";
+			?>	
 				<br><br>
 				<table class="control_data" >
 					<tr>
@@ -135,10 +132,18 @@ session_start();
 						<td>
 						<?php
 							try{
+								$wheather_content0 = get_json_content("http://192.168.0.101/json/dht");
+								$t0 = $wheather_content1['temperature'];
+								$h0 = $wheather_content1['humidity'];
+								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('3', '$t0', '2', '1')");
+								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('5', '$h0', '2', '1')");
 								// $url1 = file_get_contents("http://192.168.0.100/json/dht");
 								// $content1 = json_decode($url1,true);
 								$wheather_content1 = get_json_content("http://192.168.0.100/json/dht");
 								$t1 = $wheather_content1['temperature'];
+								$h1 = $wheather_content1['humidity'];
+								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('3', '$t1', '1', '2')");
+								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('5', '$h1', '1', '2')");
 								// $url2 = file_get_contents("http://192.168.0.101/json/dht");
 								// $content2 = json_decode($url2,true);
 
@@ -146,7 +151,10 @@ session_start();
 								// $content3 = json_decode($url3,true);
 								$wheather_content3 = get_json_content("http://192.168.0.102/json/dht");
 								$t2 = $wheather_content3['temperature'];
-
+								$h2 = $wheather_content1['humidity'];
+								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('3', '$t2', '3', '3')");
+								mysqli_query($connection, "INSERT INTO `data` (`sensor`, `value`, `wemos`, `room`) VALUES ('5', '$h2', '3', '3')");
+								
 								if ($t1 != 0 && $t2 != 0) {
 									$average = ($t1 + $t2)/2;
 									echo $average," °С";
@@ -186,6 +194,12 @@ session_start();
 						</td>
 					</tr>
 				</table>
+				<?php
+		}
+
+				?>
+
+				
 			</div>
 	
 

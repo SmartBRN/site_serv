@@ -1,6 +1,6 @@
 <header>
 	<div class="logo_place">
-		<img src="img/logo.png">
+	
 	</div>
 	<div class="wheather_place visible-xs">
 		<?php
@@ -37,6 +37,8 @@
 				echo "H: ";
 				print_r($wheather_content['humidity']);
 				echo " %";
+				
+
 			} catch(Exception $e){
 				echo 'Ошибка: ', $e->getMessage(),"\n";
 			}
