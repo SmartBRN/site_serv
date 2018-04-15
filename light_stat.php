@@ -93,7 +93,7 @@
 			// $mas_of_objects = array($noo);
 		?>
 		<div class="out_data">
-			<p>Статистика температур</p>
+			<p>Статистика света</p>
 
 			<table>
 				<tr>
