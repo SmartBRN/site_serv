@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<meta name="yandex-verification" content="7c7e165be62494c6" />
 	
-	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" />
 	<link rel="stylesheet" href="libs/animate/animate.css" />
 	
 	<link rel="stylesheet" href="css/header.css" />

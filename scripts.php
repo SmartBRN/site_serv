@@ -7,13 +7,11 @@
 <script src="libs/respond/respond.min.js"></script>
 <![endif]-->
 <script src="libs/jquery/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="libs/animate/animate-css.js"></script>
 <script src="libs/animate/wow.min.js"></script>
 
 <script>
 	new WOW().init();
 </script>
-
-<script type="text/javascript" src="js/css-pop.js"></script>
 <script src="js/common.js"></script>
