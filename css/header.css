@@ -39,12 +39,13 @@ body textarea:required:valid {
 	
 }
 body {
-	font-size: 16px;
+	font-family: Impact;
+	font-size: 20pt;
 	min-width: 320px;
 	position: relative;
 	height: 100vh;
-	background-color: #b0edef;
-	color: #007f7a;
+	background-color: #efefef;
+	color: #14614c;
 }
 .without_numbers{
 	list-style-type: none;
